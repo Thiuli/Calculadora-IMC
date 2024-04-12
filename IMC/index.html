@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="autor" content = "Thiuli Dias">
+
+    <link rel="stylesheet" href="style.css">
+    <link src = "./script.js" defer></script>
+    <title>Calculadora IMC</title>
+</head>
+<body>
+    <main>
+        <h1>Calculadora IMC</h1>
+        <section>
+            <h2>Cadastro de informções</h2>
+
+            <form method = "post" onsubmit="CalcularImc(event)">
+
+            <div class="campo-form">
+                <label for = "nome">Nome:</label>
+                <input type = "text" name= "campo-nome" id="name" 
+                placeholder="Insira seu nome completo">
+            </div>
+            <div class="campo-form"></div>
+                <label for = "altura">Altura:</label>
+                <input type = number name = "campo-altura" id="height" 
+                placeholder="Insira sua altura. Ex: 1,70">
+                
+            </div>
+
+            <div class="campo-form">
+                <label for = "peso">Peso:</label>
+                <input type = "number" name = "campo-peso" id="weight" 
+                placeholder="Insira seu peso. Ex: 101kg">
+                </div>
+
+                <div class="conjunto-botões">
+                    <button type = "reset"> Cancelar</button>
+                    <button type="Subit">Calcular</button>
+                </div>
+            </form>
+        </section>
+
+    <section>
+
+            <!Construção de tabela-->
+
+       <h2>Usuários Cadastros</h2>   
+
+<table>
+
+       <caption>Tabela de Usuários</caption>
+       <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Altura</th>
+                <th>Peso</th>
+                <th>Valor do IMC</th>
+                <th>Data de Cadastro</th>
+            </tr>
+     </thead>
+
+     <tbody id="corpo-tabela">
+        <!--Corpo da tabela criando no js-->
+     </tbody>
+    </table>
+    <button class="botao-tabela" onclick="deletarRegistros()">
+    Limpar valores
+    </button>
+        </section>
+    </main>
+</body>
+</html>
